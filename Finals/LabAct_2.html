@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Or Odd</title>
+    <style>
+        body {
+            text-align: center; margin: auto 20px; margin-top: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function getValue() {
+        var num = document.getElementById('num').value
+        
+
+        if(num % 2 == 0)
+        document.getElementById('Result1').innerHTML = num + " is EVEN";
+        else
+        document.getElementById('Result1').innerHTML = num + " is ODD";
+        }
+        if (i <=1)
+            document.getElementById('Result2').innerHTML = num + " is INVALID";
+
+        var i;
+        var count;
+        for(i = 0 ; i < num; i++){
+            if( i < num)
+                count++;
+        }
+                if (count <=2)
+                document.getElementById('Result2').innerHTML = num + " is PRIME";
+                else
+                document.getElementById('Result2').innerHTML = num + " is COMPOSITE";
+         </script>
+
+    <input type="text" id="num" placeholder="Enter a Number">
+    <button onclick="getValue()">Submit</button>
+
+    <div id="Result1"></div>
+    <div id="Result2"></div>
+
+</body>
+</html>

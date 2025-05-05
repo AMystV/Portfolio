@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table (Beginner Version)</title>
+</head>
+<body>
+    <h2>Multiplication Table</h2>
+    <p>Enter any positive number:</p>
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="makeTable()">Show Table</button>
+    <div id="result"></div>
+
+    <script>
+        function makeTable() {
+            var n = document.getElementById('num').value;
+            n = parseInt(n);
+
+            if (isNaN(n) || n < 1) {
+                document.getElementById('result').innerHTML = "Please enter a positive number.";
+                return;
+            }
+
+            var tableHTML = "<table border='1' cellpadding='5'>";
+            // First row (header)
+            tableHTML += "<tr><td></td>";
+            for (var i = 1; i <= n; i++) {
+                tableHTML += "<td>" + i + "</td>";
+            }
+            tableHTML += "</tr>";
+
+            // Table rows
+            for (var i = 1; i <= n; i++) {
+                tableHTML += "<tr>";
+                tableHTML += "<td>" + i + "</td>";
+                for (var j = 1; j <= n; j++) {
+                    tableHTML += "<td>" + (i * j) + "</td>";
+                }
+                tableHTML += "</tr>";
+            }
+            tableHTML += "</table>";
+
+            document.getElementById('result').innerHTML = tableHTML;
+        }
+    </script>
+</body>
+</html>

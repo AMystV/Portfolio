@@ -1,0 +1,339 @@
+/* Font */
+body {
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Navbar Gradient */
+.navbar.bg-gradient {
+  background: linear-gradient(30deg, #6a11cb, #2575fc);
+}
+
+/* Light mode: navbar menu background */
+#navMenu {
+  background-color: #3f6ff3; /* Soft light blue */
+  border-radius: 0 0 12px 12px; 
+  box-shadow: 0 4px 12px rgba(37, 117, 252, 0.2);
+  transition: background-color 0.3s ease;
+  padding: 10px 15px;
+}
+
+/* Dark mode: navbar menu background */
+body.dark-mode #navMenu {
+  background-color: #38425a; /* Dark navy */
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+  border-radius: 0 0 12px 12px;
+  padding: 10px 15px;
+}
+
+/* Optional: style nav links for contrast */
+#navMenu .nav-link {
+  color: #0b3d91; /* Dark blue for light mode */
+  transition: color 0.3s ease;
+}
+
+#navMenu .nav-link:hover,
+#navMenu .nav-link.active {
+  color: #a67c00; /* Warm gold accent */
+}
+
+body.dark-mode #navMenu .nav-link {
+  color: #e0d68a; /* Light gold for dark mode */
+}
+
+body.dark-mode #navMenu .nav-link:hover,
+body.dark-mode #navMenu .nav-link.active {
+  color: #ffd54f; /* Brighter gold on hover */
+}
+
+.navbar .nav-link {
+  color: rgb(255, 255, 255) !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffd700 !important;
+}
+
+/* Home Section Background */
+.home-bg {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Buttons with Glow */
+.btn-glow {
+  background-color: #2575fc;
+  color: white;
+  box-shadow: 0 0 8px #2575fc;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-glow:hover,
+.btn-glow:focus {
+  box-shadow: 0 0 20px #ffd700;
+  transform: scale(1.05);
+  color: #ffd700;
+}
+
+/* Cards Fun Style */
+.card-fun {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+/* About photo */
+.about-photo {
+  max-width: 250px;
+  border: 5px solid #2575fc;
+  transition: transform 0.4s ease;
+}
+
+.about-photo:hover {
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(37, 117, 252, 0.6);
+}
+
+/* Skills Section Gradient */
+.bg-gradient-light {
+  background: linear-gradient(135deg, #255bf0, #3401dc);
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  line-height: 1;
+  display: none;
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  z-index: 9999;
+}
+
+#backToTop:hover {
+  box-shadow: 0 0 15px #ffd700;
+  animation: bounce 1s infinite;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #12121282;
+  color: #11aeca;
+}
+
+body.dark-mode .navbar.bg-gradient {
+  background: linear-gradient(45deg, #222222, #0d5e8a);
+}
+
+body.dark-mode .navbar .nav-link {
+  color: #ddd !important;
+}
+
+body.dark-mode .navbar .nav-link:hover,
+body.dark-mode .navbar .nav-link.active {
+  color: #ffcc00 !important;
+}
+
+body.dark-mode .card-fun {
+  background-color: #222;
+  color: #eee;
+  box-shadow: 0 15px 30px rgba(255, 204, 0, 0.5);
+}
+
+body.dark-mode .btn-glow {
+  background-color: #444;
+  box-shadow: 0 0 8px #ffcc00;
+  color: #ffcc00;
+}
+
+body.dark-mode .btn-glow:hover,
+body.dark-mode .btn-glow:focus {
+  box-shadow: 0 0 20px #ffcc00;
+  color: #fff;
+}
+
+body.dark-mode .about-photo {
+  border-color: #ffcc00;
+  box-shadow: 0 10px 20px rgba(255, 204, 0, 0.6);
+}
+
+body.dark-mode .bg-gradient-light {
+  background: linear-gradient(135deg, #222, #444);
+}
+
+body.dark-mode footer {
+  background-color: #222;
+}
+/* Dark mode styles scoped to About, Skills, Projects sections */
+body.dark-mode #about,
+body.dark-mode #skills,
+body.dark-mode #projects {
+  background-color: #1e1e2f !important; 
+  color: #e0e0e0 !important;            
+}
+
+/* About Section */
+body.dark-mode #about p.fs-5 {
+  color: #cfcfcf !important;
+}
+
+/* Skills Section */
+body.dark-mode #skills h2,
+body.dark-mode #skills h4,
+body.dark-mode #skills h5 {
+  color: #ffd54f !important; /* Warm gold headings */
+}
+
+body.dark-mode #skills p.text-muted,
+body.dark-mode #skills small.text-muted {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode #skills .progress {
+  background-color: #33334d !important; /* Darker progress bar background */
+  box-shadow: none !important;
+}
+
+body.dark-mode #skills .progress-bar.bg-primary {
+  background-color: #ffca28 !important; /* Gold progress bar */
+  box-shadow: 0 0 10px #ffca28 !important;
+}
+
+body.dark-mode #skills .progress-bar.bg-info {
+  background-color: #ffca28 !important;
+  box-shadow: 0 0 10px #ffca28 !important;
+}
+
+body.dark-mode #skills .progress-bar.bg-warning {
+  background-color: #ffca28 !important;
+  box-shadow: 0 0 10px #ffca28 !important;
+}
+
+body.dark-mode #skills .progress-bar.bg-danger {
+  background-color: #ffca28 !important;
+  box-shadow: 0 0 10px #ffca28 !important;
+}
+
+/* Projects Section */
+body.dark-mode #projects .card-fun {
+  background-color: #222233 !important;
+  color: #ffd54f !important;
+  box-shadow: 0 15px 30px rgba(255, 197, 0, 0.5) !important;
+  border: 1px solid #ffd54f;
+}
+
+body.dark-mode #projects .card-fun .card-title {
+  color: #ffd54f !important;
+}
+
+body.dark-mode #projects .card-fun .card-text {
+  color: #e0d68a !important;
+}
+
+body.dark-mode #projects .btn-primary.btn-glow {
+  background-color: #33334d !important;
+  color: #ffd54f !important;
+  box-shadow: 0 0 8px #ffd54f !important;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #projects .btn-primary.btn-glow:hover,
+body.dark-mode #projects .btn-primary.btn-glow:focus {
+  background-color: #ffd54f !important;
+  color: #222233 !important;
+  box-shadow: 0 0 20px #ffd54f !important;
+}
+
+/* About photo in dark mode */
+body.dark-mode #about .about-photo {
+  border-color: #ffd54f !important;
+  box-shadow: 0 10px 20px rgba(255, 197, 0, 0.6) !important;
+}
+
+/* Animations */
+/* Bounce for back to top */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
+.card-fun.position-relative {
+  position: relative;
+  overflow: visible; /* allow drawer to overflow */
+}
+
+.card-fun.position-relative {
+  position: relative;
+  overflow: visible;
+}
+
+.drawer-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  z-index: 1100;
+  padding: 0 20px;
+}
+
+.drawer-panel.open {
+  max-height: 300px;
+  padding: 15px 20px;
+}
+
+.drawer-panel a {
+  display: block;
+  padding: 8px 0;
+  color: #0b3d91;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  transition: color 0.2s ease;
+}
+
+.drawer-panel a:last-child {
+  border-bottom: none;
+}
+
+.drawer-panel a:hover {
+  color: #2575fc;
+}
+
+.drawer-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  user-select: none;
+}
+

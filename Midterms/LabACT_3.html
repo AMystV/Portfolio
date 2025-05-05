@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilometers to Centimeters</title>
+    <style>
+        body {
+            text-align: center; margin: auto 20px; margin-top: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function con() {
+        var kilo = document.getElementById('kilo').value
+        var cm = kilo * 100000;
+        document.getElementById('getValue').innerHTML = kilo + " KILOMETER IS " + cm + "cm.";
+        }
+
+         </script>
+
+    <input type="text" id="kilo" placeholder="Enter a Number">
+    <button onclick="con()">Submit</button>
+
+    <div id="getValue"></div>
+
+</body>
+</html>

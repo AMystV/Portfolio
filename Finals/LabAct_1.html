@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 320px;
+            margin: 40px auto;
+            border: 1px solid #000000;
+            border-radius: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 18px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 22%;
+            padding: 10px 0;
+            font-size: 18px;
+            cursor: pointer;
+            border: 1px solid #888;
+            border-radius: 4px;
+            background-color: #000000;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #d0d0d0;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-weight: normal;
+        }
+    </style>
+    <script type="text/javascript" src="function.js"></script>
+</head>
+<body>
+    
+    <input type="text" id="num1" placeholder="Enter a number" />
+    <input type="text" id="num2" placeholder="Enter a number" />
+    <div>
+        <button onclick="Sum();">+</button>
+        <button onclick="Difference();">-</button>
+        <button onclick="Multiplication();">×</button>
+        <button onclick="Division();">÷</button>
+    </div>
+    <h3>Result: <span id="Result"></span></h3>
+</body>
+</html>
